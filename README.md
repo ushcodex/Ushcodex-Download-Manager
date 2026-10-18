@@ -27,6 +27,7 @@ A high-performance, multi-threaded desktop download manager engineered to bypass
 * **`warp_manager.py`**: Detection, installation, and management of Cloudflare WARP client.
 * **`abu_network_audit.py`**: Diagnostic suite for testing TCP throughput, UDP reachability, and network QoS queues.
 * **`Launch_Ushcodex_DM.bat`**: 1-click Windows launcher.
+* **`udm-rust/`**: High-performance Rust edition featuring multi-stream engine, system clipboard auto-interception, local HTTP daemon, Chrome/Edge browser extension, and cross-platform compilation matrix. See [udm-rust/README.md](udm-rust/README.md).
 
 ---
 

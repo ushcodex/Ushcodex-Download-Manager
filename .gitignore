@@ -23,3 +23,8 @@ __pycache__/
 .system_generated/
 .vscode/
 .idea/
+
+# Rust build artifacts
+target/
+**/target/
+

@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Ushcodex Download Manager (UDM) Interceptor",
+  "version": "1.0.0",
+  "description": "Automatically redirects browser downloads to high-speed multi-stream Ushcodex Download Manager (Rust Engine).",
+  "permissions": [
+    "downloads",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>",
+    "http://127.0.0.1:19800/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "UDM Interceptor"
+  }
+}
