@@ -1,12 +1,12 @@
 use std::fs::{self, File, OpenOptions};
-use std::io::{Read, Seek, SeekFrom, Write};
+use std::io::{Read, Write};
 use std::path::{Path, PathBuf};
 use std::sync::atomic::{AtomicBool, AtomicU64, Ordering};
 use std::sync::Arc;
 use std::time::{Duration, Instant};
 
 use futures_util::StreamExt;
-use reqwest::header::{HeaderMap, HeaderValue, RANGE, USER_AGENT};
+use reqwest::header::RANGE;
 use tokio::sync::mpsc::UnboundedSender;
 
 use crate::resolver::{DEFAULT_USER_AGENT, ResolvedStream};
@@ -179,7 +179,7 @@ impl DownloadEngine {
                         });
                     }
 
-                    let bar_len = 25;
+                    let bar_len: usize = 25;
                     let filled = ((pct / 100.0) * bar_len as f64) as usize;
                     let bar = format!(
                         "[{}{}]",
@@ -406,7 +406,7 @@ impl DownloadEngine {
         let mut file = File::create(output_path).map_err(|e| format!("Could not create file: {}", e))?;
         let mut stream = resp.bytes_stream();
         let mut downloaded = 0u64;
-        let start_time = Instant::now();
+        let _start_time = Instant::now();
         let mut last_instant = Instant::now();
         let mut last_bytes = 0u64;
 

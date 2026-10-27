@@ -1,5 +1,5 @@
 use std::collections::HashMap;
-use reqwest::header::{HeaderMap, HeaderValue, CONTENT_DISPOSITION, CONTENT_LENGTH, CONTENT_TYPE, ACCEPT_RANGES, USER_AGENT};
+use reqwest::header::{HeaderMap, HeaderValue, CONTENT_DISPOSITION, CONTENT_LENGTH, CONTENT_TYPE, ACCEPT_RANGES};
 use regex::Regex;
 use url::Url;
 

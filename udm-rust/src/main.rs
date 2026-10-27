@@ -7,15 +7,13 @@ mod warp;
 
 use clap::{Parser, Subcommand};
 use colored::*;
-use std::collections::HashMap;
-use std::path::{Path, PathBuf};
-use std::sync::Arc;
+use std::path::PathBuf;
 use tokio::sync::mpsc;
 
 use crate::engine::{human_bytes, DownloadEngine, DEFAULT_STREAMS};
 use crate::history::{DownloadRecord, HistoryManager};
 use crate::interceptor::{AutoDetectConfig, AutoDetectionEngine, DownloadPayload};
-use crate::resolver::{UrlResolver, ResolvedStream};
+use crate::resolver::UrlResolver;
 use crate::warp::WarpManager;
 
 #[derive(Parser)]
